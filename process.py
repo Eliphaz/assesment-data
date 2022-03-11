@@ -17,4 +17,14 @@ def sales_reports(log_file):
             print(line)
 
 
+def print_sales_over_10(log_file):
+    for line in log_file:
+        line = line.rstrip()
+        num_melons = int(line[15: 18])
+        if num_melons > 10:
+            print(line)
+
+
+print_sales_over_10(log_file)
+
 sales_reports(log_file)
